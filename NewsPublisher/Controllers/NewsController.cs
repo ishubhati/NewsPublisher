@@ -17,7 +17,8 @@ namespace NewsPublisher.Controllers
             _newsPublisherModelService = newsPublisherModelService;
         }
 
-        //[HttpGet("{PageId}")]
+        //GetNewsContents API
+        // API returns data from all implemented news sources providers 
         [HttpGet]
         [ProducesResponseType(200)] //Success
         [ProducesResponseType(400)] //For bad request
@@ -42,6 +43,8 @@ namespace NewsPublisher.Controllers
             return StatusCode(Convert.ToInt32(response.StatusCode), response);
         }
 
+
+        // API Add data into JSON file from and same file is being used to fetch data from implemented providers
         [HttpPost("RegisterNewsSource")]
         [ProducesResponseType(201)] //Success
         [ProducesResponseType(400)] //For bad request
