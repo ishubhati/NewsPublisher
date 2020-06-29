@@ -20,6 +20,6 @@ namespace NewsPublisher.Core.ResponseModel
         public string StatusCode { get; set; }
 
         [JsonIgnore]
-        public double NextId { get; set; }
+        public double pageId { get; set; }
     }
 }

@@ -144,7 +144,7 @@ namespace NewsPublisher.ModelServices
 
                 if (PageId < totalPages)
                 {
-                    returnResponse.NextId = PageId + 1;
+                    returnResponse.pageId = PageId + 1;
                 }
 
             }
